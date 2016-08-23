@@ -1,0 +1,37 @@
+.float-pusher {
+	width: 20%;
+	height: 100vh;
+	max-width: 200px;
+	float: left;
+}
+
+main {
+	position: relative;
+	margin-top: 10%;
+	width: 80%;
+	max-width: 1200px;
+	min-height: 90vh;
+	float: left;
+	padding: 1rem;
+	@media (min-width: 1600px) {
+		max-width: 1200px;
+		margin-left: 4rem;
+	}
+	@media (min-width: 2000px) {
+		max-width: 1600px;
+		margin-left: 8rem;
+	}
+}
+
+.grid-item-2 {
+	width: 66%;
+}
+
+.grid-item {
+	width: 30%;
+	padding: 1rem;
+}
+
+.grid-sizer {
+	width: 33%;
+}

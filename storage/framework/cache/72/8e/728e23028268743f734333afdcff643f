@@ -1,0 +1,137 @@
+1471932566a:1:{s:11:"scripts.htm";a:5:{s:8:"fileName";s:11:"scripts.htm";s:7:"content";s:2036:"<!-- Scripts -->
+ <script src="{{ [
+    'assets/javascript/jquery.js',
+    'assets/javascript/app.js'
+]|theme }}"></script>
+<script>
+	var elem = document.querySelector('.grid');
+	var msnry = new Masonry( elem, {
+	  // options go here
+	  itemSelector: '.grid-item',
+	  // use element for option
+	  columnWidth: '.grid-sizer',
+	  percentPosition: true
+	});
+	// element argument can be a selector string for an individual element
+	var msnry = new Masonry( '.grid', {
+	  // options go here
+	});
+
+
+	var gridItems = $('.grid-item');
+	var fadeTime = 300;
+	var longFadeTime = 600;
+	$(document).ready(function(){
+		initGallery();
+	});
+	function galleryImageEventListener() {
+	    for (var i=0; i<gridItems.length; i++) {
+			(function(gridItem){
+				var imageSrc = $(gridItem).attr('src');
+				$(gridItem).click(function(){
+					$('.gallery-modal').append($('<img>').attr('src', imageSrc));
+					var imageWidth, imageHeight;
+					$('.gallery-modal img').on('load', function(){
+						imageWidth = $(this).outerWidth(true);
+						imageHeight = $(this).outerHeight(true);
+						$('.gallery-modal').css('width', imageWidth).css('height', imageHeight);
+					});
+					$('.gallery-overlay').fadeIn(fadeTime);
+				});
+			})(gridItems[i]);
+	    }
+	}
+	function modalCloseEventListener() {
+		$('.modal-close, .gallery-overlay').click(function(){
+			$('.gallery-overlay').fadeOut(fadeTime, function(){
+				$('.gallery-modal img').remove();
+				$('.gallery-modal').css('width', 0).css('height', 0);					
+			});
+		});
+		$('.gallery-modal').click(function(event) {
+			event.stopPropagation();
+		});
+	}
+	function mouseHoverEventListener() {
+		$('.gallery-modal').on('mouseenter', function(){
+			$('.modal-close').fadeIn(fadeTime);
+		}); 		
+		$('.gallery-modal').on('mouseleave', function(){
+			$('.modal-close').fadeOut(longFadeTime);
+		});
+	}
+	function initGallery() {
+		galleryImageEventListener();
+		modalCloseEventListener();
+		mouseHoverEventListener();
+	}
+</script>
+{% framework extras %}";s:5:"mtime";i:1471931963;s:6:"markup";s:2036:"<!-- Scripts -->
+ <script src="{{ [
+    'assets/javascript/jquery.js',
+    'assets/javascript/app.js'
+]|theme }}"></script>
+<script>
+	var elem = document.querySelector('.grid');
+	var msnry = new Masonry( elem, {
+	  // options go here
+	  itemSelector: '.grid-item',
+	  // use element for option
+	  columnWidth: '.grid-sizer',
+	  percentPosition: true
+	});
+	// element argument can be a selector string for an individual element
+	var msnry = new Masonry( '.grid', {
+	  // options go here
+	});
+
+
+	var gridItems = $('.grid-item');
+	var fadeTime = 300;
+	var longFadeTime = 600;
+	$(document).ready(function(){
+		initGallery();
+	});
+	function galleryImageEventListener() {
+	    for (var i=0; i<gridItems.length; i++) {
+			(function(gridItem){
+				var imageSrc = $(gridItem).attr('src');
+				$(gridItem).click(function(){
+					$('.gallery-modal').append($('<img>').attr('src', imageSrc));
+					var imageWidth, imageHeight;
+					$('.gallery-modal img').on('load', function(){
+						imageWidth = $(this).outerWidth(true);
+						imageHeight = $(this).outerHeight(true);
+						$('.gallery-modal').css('width', imageWidth).css('height', imageHeight);
+					});
+					$('.gallery-overlay').fadeIn(fadeTime);
+				});
+			})(gridItems[i]);
+	    }
+	}
+	function modalCloseEventListener() {
+		$('.modal-close, .gallery-overlay').click(function(){
+			$('.gallery-overlay').fadeOut(fadeTime, function(){
+				$('.gallery-modal img').remove();
+				$('.gallery-modal').css('width', 0).css('height', 0);					
+			});
+		});
+		$('.gallery-modal').click(function(event) {
+			event.stopPropagation();
+		});
+	}
+	function mouseHoverEventListener() {
+		$('.gallery-modal').on('mouseenter', function(){
+			$('.modal-close').fadeIn(fadeTime);
+		}); 		
+		$('.gallery-modal').on('mouseleave', function(){
+			$('.modal-close').fadeOut(longFadeTime);
+		});
+	}
+	function initGallery() {
+		galleryImageEventListener();
+		modalCloseEventListener();
+		mouseHoverEventListener();
+	}
+</script>
+{% framework extras %}";s:4:"code";N;}}

@@ -1,0 +1,8 @@
+1. create navigation and gallery partials
+2. create layouts from partials
+3. create pages from layouts
+
+
+
+header/footer/scripts go in layout
+page body/content goes in page

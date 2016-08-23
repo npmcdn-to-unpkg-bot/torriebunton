@@ -1,0 +1,42 @@
+description = "Image Gallery Page Layout"
+==
+function onInit() {
+    $baseUrl = $this->url;
+    $imageUrls = Storage::files('media'.$baseUrl);
+    $this['galleryImages'] = $imageUrls;
+}
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TorrieBunton - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Torrie Bunton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+        <link rel="icon" type="image/png" href="{{ 'assets/images/emerald.png'|theme }}" />
+        {% styles %}
+        <link href="{{ [
+            'assets/fonts/icons.css',
+            'assets/css/theme.css'
+        ]|theme }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="gallery-overlay">
+            <div class="gallery-modal">
+                <div class="modal-close"></div>
+            </div>
+        </div>
+        {% partial "nav" %}
+        <div class="float-pusher"></div>
+        <main id="layout-content" class="grid">
+            {% for url in galleryImages %}
+                <img class="grid-item" src="../../storage/app/{{ url }}"/>
+            {% endfor %}
+        </main>
+        {% partial "scripts" %}
+    </body>
+</html>

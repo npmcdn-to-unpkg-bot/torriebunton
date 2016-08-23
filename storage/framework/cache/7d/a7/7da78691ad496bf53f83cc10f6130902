@@ -1,0 +1,16 @@
+1471905141a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:212:"<footer id="layout-footer">
+    <div id="footer">
+	    <div class="container">
+	        <hr />
+	        <p class="muted credit">&copy; 2015 - {{ "now"|date("Y") }} Torrie Bunton</p>
+	    </div>
+	</div>
+</footer>
+";s:5:"mtime";i:1471742087;s:6:"markup";s:211:"<footer id="layout-footer">
+    <div id="footer">
+	    <div class="container">
+	        <hr />
+	        <p class="muted credit">&copy; 2015 - {{ "now"|date("Y") }} Torrie Bunton</p>
+	    </div>
+	</div>
+</footer>";s:4:"code";N;}}
