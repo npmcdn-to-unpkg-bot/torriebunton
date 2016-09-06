@@ -35,7 +35,7 @@ class __TwigTemplate_8c06405a4d087a2be0a9fc2380ab962769f1fb7254dcbea831ff465851a
         <meta name=\"author\" content=\"Torrie Bunton\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
-        <script src=\"https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js\"></script>
+        <script src=\"https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js\"></script>
         <link rel=\"icon\" type=\"image/png\" href=\"";
         // line 12
         echo $this->env->getExtension('CMS')->themeFilter("assets/images/emerald.png");
@@ -115,7 +115,7 @@ class __TwigTemplate_8c06405a4d087a2be0a9fc2380ab962769f1fb7254dcbea831ff465851a
 /*         <meta name="author" content="Torrie Bunton">*/
 /*         <meta name="viewport" content="width=device-width, initial-scale=1.0">*/
 /*         <meta name="generator" content="OctoberCMS">*/
-/*         <script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>*/
+/*         <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>*/
 /*         <link rel="icon" type="image/png" href="{{ 'assets/images/emerald.png'|theme }}" />*/
 /*         {% styles %}*/
 /*         <link href="{{ [*/
